@@ -1,5 +1,5 @@
 """
-Hermes CLI - Unified command-line interface for Hermes Agent.
+Hermes CLI - Unified command-line interface for Corpus Agent.
 
 Provides subcommands for:
 - hermes chat          - Interactive chat (same as ./hermes)

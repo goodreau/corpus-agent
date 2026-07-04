@@ -1,5 +1,5 @@
 """
-LINE Messaging API platform adapter for Hermes Agent.
+LINE Messaging API platform adapter for Corpus Agent.
 
 A bundled platform plugin that runs an aiohttp webhook server, accepts LINE
 webhook events (signature-verified), and relays messages to/from the agent

@@ -1,5 +1,5 @@
 """
-IRC Platform Adapter for Hermes Agent.
+IRC Platform Adapter for Corpus Agent.
 
 A plugin-based gateway adapter that connects to an IRC server and relays
 messages to/from the Hermes agent.  Zero external dependencies — uses
