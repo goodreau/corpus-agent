@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Canvas LMS API CLI for Hermes Agent.
+"""Canvas LMS API CLI for Corpus Agent.
 
 A thin CLI wrapper around the Canvas REST API.
 Authenticates using a personal access token from environment variables.

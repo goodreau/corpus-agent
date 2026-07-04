@@ -6,9 +6,9 @@ requires = ["setuptools>=77.0,<83"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "hermes-agent"
+name = "corpus-agent"
 version = "0.18.0"
-description = "The self-improving AI agent — creates skills from experience, improves them during use, and runs anywhere"
+description = "A self-improving AI agent that creates skills from experience, improves them during use, and runs anywhere"
 readme = "README.md"
 # Upper bound is load-bearing, not cosmetic. uv resolves the project's
 # Python from `requires-python`, and an inherited `UV_PYTHON` env var (or a
@@ -180,7 +180,7 @@ voice = [
 pty = [
   # Kept as a no-op back-compat alias — `ptyprocess` and `pywinpty` are now
   # in the main `dependencies` list (with the same platform markers), so
-  # any existing `pip install hermes-agent[pty]` invocations resolve cleanly
+  # any existing `pip install corpus-agent[pty]` invocations resolve cleanly
   # without pulling in extra packages.
 ]
 honcho = ["honcho-ai==2.0.1"]
@@ -195,7 +195,7 @@ mem0 = ["mem0ai==2.0.10"]
 # (see the main `dependencies` list) since the byte/pixel shrink paths are on
 # the default vision-embed path and the mid-session lazy install deadlocked the
 # CLI under prompt_toolkit (#40490). This extra is kept as a no-op back-compat
-# alias so existing `pip install hermes-agent[vision]` invocations still resolve.
+# alias so existing `pip install corpus-agent[vision]` invocations still resolve.
 vision = []
 # CVE-2026-48710 (BadHost): Starlette is pulled transitively by mcp's
 # sse-starlette / HTTP-SSE stack (and by fastapi in the `web` extra). Before
@@ -230,23 +230,23 @@ azure-identity = ["azure-identity==1.25.3"]
 termux = [
   # Baseline Android / Termux path for reliable fresh installs.
   "python-telegram-bot[webhooks]==22.6",
-  "hermes-agent[cron]",
-  "hermes-agent[cli]",
-  "hermes-agent[pty]",
-  "hermes-agent[mcp]",
-  "hermes-agent[honcho]",
-  "hermes-agent[acp]",
+  "corpus-agent[cron]",
+  "corpus-agent[cli]",
+  "corpus-agent[pty]",
+  "corpus-agent[mcp]",
+  "corpus-agent[honcho]",
+  "corpus-agent[acp]",
 ]
 termux-all = [
   # Best-effort "install all" profile for Termux. Same policy as [all]:
   # only includes extras that aren't covered by `tools/lazy_deps.py`.
   # Backends like telegram/slack/dingtalk/feishu/honcho lazy-install at
   # first use, so they're no longer eager-installed here.
-  "hermes-agent[termux]",
-  "hermes-agent[google]",
-  "hermes-agent[homeassistant]",
-  "hermes-agent[sms]",
-  "hermes-agent[web]",
+  "corpus-agent[termux]",
+  "corpus-agent[google]",
+  "corpus-agent[homeassistant]",
+  "corpus-agent[sms]",
+  "corpus-agent[web]",
 ]
 dingtalk = ["dingtalk-stream==0.24.3", "alibabacloud-dingtalk==2.2.42", "qrcode==7.4.2"]
 feishu = ["lark-oapi==1.5.3", "qrcode==7.4.2"]
@@ -292,16 +292,16 @@ all = [
   # [all], `uv sync --locked` on Windows tried to build it from sdist
   # and failed on `make`. Lazy-install routes that build to first use,
   # where the user is expected to have a toolchain available.
-  "hermes-agent[cron]",
-  "hermes-agent[cli]",
-  "hermes-agent[pty]",
-  "hermes-agent[mcp]",
-  "hermes-agent[homeassistant]",
-  "hermes-agent[sms]",
-  "hermes-agent[acp]",
-  "hermes-agent[google]",
-  "hermes-agent[web]",
-  "hermes-agent[youtube]",
+  "corpus-agent[cron]",
+  "corpus-agent[cli]",
+  "corpus-agent[pty]",
+  "corpus-agent[mcp]",
+  "corpus-agent[homeassistant]",
+  "corpus-agent[sms]",
+  "corpus-agent[acp]",
+  "corpus-agent[google]",
+  "corpus-agent[web]",
+  "corpus-agent[youtube]",
 ]
 
 [project.scripts]

@@ -149,7 +149,7 @@
     "url": "https://github.com/teknium1/nous-discord-archive/blob/main/archives/community-projects-showcase/1492207991162671255-Hermes-Agent-for-my-team.txt",
     "date": "",
     "category": "business-ops",
-    "headline": "Hermes Agent for my team — repos, onchain debug, protocol docs",
+    "headline": "Corpus Agent for my team — repos, onchain debug, protocol docs",
     "quote": "It's right now integrated with SourceDev to index repos (self hosted), Tenderly MCP to debug onchain transactions, LLM-Wiki ingest of Litepaper of our protocol and other docs. Hopefully team will find it useful and will integrate more infra tools overtime to help the team.",
     "size": "md"
   },
