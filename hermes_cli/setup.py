@@ -2821,7 +2821,7 @@ def run_setup_wizard(args):
     )
     print(
         color(
-            "│             ⚕ Hermes Agent Setup Wizard                │", Colors.MAGENTA
+            "│             ⚕ Corpus Agent Setup Wizard                │", Colors.MAGENTA
         )
     )
     print(
@@ -2832,7 +2832,7 @@ def run_setup_wizard(args):
     )
     print(
         color(
-            "│  Let's configure your Hermes Agent installation.       │", Colors.MAGENTA
+            "│  Let's configure your Corpus Agent installation.       │", Colors.MAGENTA
         )
     )
     print(

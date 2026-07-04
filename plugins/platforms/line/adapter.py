@@ -41,7 +41,7 @@ Synthesis credits
 -----------------
 
 This file is a synthesis of seven open community PRs adding LINE support
-to Hermes Agent. It deliberately ports the *strongest* idea from each into
+to Corpus Agent. It deliberately ports the *strongest* idea from each into
 a single plugin-form module that requires zero core edits:
 
 * PR #18153 (leepoweii)   — Template Buttons postback cache state machine,

@@ -197,7 +197,7 @@ def resolve_desc(slug: str, provided: str | None) -> str:
 def emit_llms_index() -> str:
     """Build the short llms.txt index."""
     lines: list[str] = []
-    lines.append("# Hermes Agent")
+    lines.append("# Corpus Agent")
     lines.append("")
     lines.append(
         "> The self-improving AI agent built by Nous Research. A terminal-native "
@@ -241,7 +241,7 @@ def emit_llms_full() -> str:
     """
     seen: set[Path] = set()
     chunks: list[str] = [
-        "# Hermes Agent — Full Documentation\n",
+        "# Corpus Agent — Full Documentation\n",
         (
             "This file is the entire Corpus Agent documentation concatenated for LLM "
             "context ingestion. Section order reflects docs-site navigation: Getting "
