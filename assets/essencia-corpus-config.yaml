@@ -1,0 +1,23 @@
+# Essencia-Corpus profile preset
+# Copy to ~/.hermes/profiles/corpus/config.yaml
+
+display:
+  skin: essencia
+  interface: tui
+  show_reasoning: true
+  memory_notifications: verbose
+
+memory:
+  enabled: true
+
+curator:
+  enabled: true
+  interval_hours: 4
+  min_idle_hours: 0.5
+
+cron:
+  mirror_delivery: false
+  max_parallel_jobs: 1
+  # Optional: schedule the self-study skill as an idle routine.
+  # Use the CLI to add it after profile setup:
+  # hermes -p corpus cron add "every 12h" "Run self-study review" --skills self-study

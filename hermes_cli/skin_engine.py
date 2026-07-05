@@ -99,6 +99,7 @@ BUILT-IN SKINS
 ==============
 
 - ``default`` — Classic Corpus — gold/kawaii (the current look)
+- ``essencia`` — Violet crystal branding for the Essencia family
 - ``ares``    — Crimson/bronze war-god theme with custom spinner wings
 - ``mono``    — Clean grayscale monochrome
 - ``slate``   — Cool blue developer-focused theme
@@ -195,6 +196,79 @@ _BUILTIN_SKINS: Dict[str, Dict[str, Any]] = {
             "help_header": "(^_^)? Available Commands",
         },
         "tool_prefix": "┊",
+    },
+    "essencia": {
+        "name": "essencia",
+        "description": "Essencia family theme — violet crystal branding",
+        "colors": {
+            "banner_border": "#3D1A6E",
+            "banner_title": "#C8A8F0",
+            "banner_accent": "#9B6DD6",
+            "banner_dim": "#5C3A9E",
+            "banner_text": "#EDE8F8",
+            "ui_accent": "#9B6DD6",
+            "ui_label": "#C8A8F0",
+            "ui_ok": "#8FE7C8",
+            "ui_error": "#FF8DA1",
+            "ui_warn": "#E7C38F",
+            "prompt": "#EDE8F8",
+            "input_rule": "#5C3A9E",
+            "response_border": "#9B6DD6",
+            "status_bar_bg": "#0D0620",
+            "status_bar_text": "#EDE8F8",
+            "status_bar_strong": "#C8A8F0",
+            "status_bar_dim": "#6F58A3",
+            "status_bar_good": "#8FE7C8",
+            "status_bar_warn": "#E7C38F",
+            "status_bar_bad": "#DFA9F4",
+            "status_bar_critical": "#FF8DA1",
+            "session_label": "#C8A8F0",
+            "session_border": "#6F58A3",
+            "voice_status_bg": "#0D0620",
+            "selection_bg": "#2A1649",
+            "completion_menu_bg": "#150B2B",
+            "completion_menu_current_bg": "#2A1649",
+            "completion_menu_meta_bg": "#1C0F37",
+            "completion_menu_meta_current_bg": "#382060",
+        },
+        "spinner": {
+            "waiting_faces": ["(◈)", "(◇)", "(◆)", "(⬡)", "(⊡)"],
+            "thinking_faces": ["(◈)", "(◇)", "(◆)", "(⬡)", "(⊡)"],
+            "thinking_verbs": [
+                "reflecting", "distilling", "crystallizing", "synthesizing",
+                "composing", "refining", "tracing essence", "weaving structure",
+            ],
+            "wings": [
+                ["⟨◈", "◈⟩"],
+                ["⟨◇", "◇⟩"],
+                ["⟨⬡", "⬡⟩"],
+            ],
+        },
+        "branding": {
+            "agent_name": "Corpus",
+            "welcome": "Welcome to Corpus. Part of the Essencia family.",
+            "goodbye": "Until next time. ◈",
+            "response_label": " ◈ Corpus ",
+            "prompt_symbol": "◈",
+            "help_header": "(◈) Available Commands",
+        },
+        "tool_prefix": "╌",
+        "banner_logo": """[bold #C8A8F0] ██████╗ ██████╗ ██████╗ ██████╗ ██╗   ██╗███████╗[/]
+[bold #B68CE8]██╔════╝██╔═══██╗██╔══██╗██╔══██╗██║   ██║██╔════╝[/]
+[#9B6DD6]██║     ██║   ██║██████╔╝██████╔╝██║   ██║███████╗[/]
+[#7F53C0]██║     ██║   ██║██╔══██╗██╔═══╝ ██║   ██║╚════██║[/]
+[#5C3A9E]╚██████╗╚██████╔╝██║  ██║██║     ╚██████╔╝███████║[/]
+[#3D1A6E] ╚═════╝ ╚═════╝ ╚═╝  ╚═╝╚═╝      ╚═════╝ ╚══════╝[/]""",
+        "banner_hero": """[#C8A8F0]⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀[/]
+[#B68CE8]⠀⠀⠀⠀⠀⠀⠀⠀⢀⣶⣿⣿⣿⣶⡀⠀⠀⠀⠀⠀⠀⠀⠀[/]
+[#9B6DD6]⠀⠀⠀⠀⠀⠀⠀⢠⣿⣿⠟⠻⣿⣿⡄⠀⠀⠀⠀⠀⠀⠀[/]
+[#7F53C0]⠀⠀⠀⠀⠀⠀⠀⢸⣿⡏⠀◈⠀⢹⣿⡇⠀⠀⠀⠀⠀⠀⠀[/]
+[#5C3A9E]⠀⠀⠀⠀⠀⠀⠀⢸⣿⣧⠀⠀⠀⣼⣿⡇⠀⠀⠀⠀⠀⠀⠀[/]
+[#5C3A9E]⠀⠀⠀⠀⠀⠀⠀⠘⣿⣿⣦⣤⣴⣿⣿⠃⠀⠀⠀⠀⠀⠀⠀[/]
+[#3D1A6E]⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⣿⣿⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀[/]
+[#3D1A6E]⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀[/]
+[#7F53C0]⠀⠀⠀⠀⠀⠀⠀⠀⟨◇⠀⠀⠀◇⟩⠀⠀⠀⠀⠀⠀⠀⠀[/]
+[dim #5C3A9E]⠀⠀⠀⠀⠀⠀⠀⠀⠀essencia⠀⠀⠀⠀⠀⠀⠀⠀⠀[/]""",
     },
     "ares": {
         "name": "ares",

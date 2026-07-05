@@ -33,7 +33,7 @@ class TestSkinConfig:
     def test_get_branding_with_fallback(self):
         from hermes_cli.skin_engine import load_skin
         skin = load_skin("default")
-        assert skin.get_branding("agent_name") == "Hermes Agent"
+        assert skin.get_branding("agent_name") == "Corpus Agent"
         assert skin.get_branding("nonexistent", "fallback") == "fallback"
 
     def test_get_spinner_wings_empty_for_default(self):
@@ -61,6 +61,36 @@ class TestBuiltinSkins:
         assert len(wings) > 0
         assert isinstance(wings[0], tuple)
         assert len(wings[0]) == 2
+
+    def test_essencia_skin_loads(self):
+        from hermes_cli.skin_engine import load_skin
+
+        skin = load_skin("essencia")
+        assert skin.name == "essencia"
+        assert skin.tool_prefix == "╌"
+        assert skin.get_color("banner_border") == "#3D1A6E"
+        assert skin.get_color("banner_title") == "#C8A8F0"
+        assert skin.get_color("response_border") == "#9B6DD6"
+        assert skin.get_color("status_bar_bg") == "#0D0620"
+
+    def test_essencia_has_spinner_customization(self):
+        from hermes_cli.skin_engine import load_skin
+
+        skin = load_skin("essencia")
+        wings = skin.get_spinner_wings()
+        assert len(wings) > 0
+        assert isinstance(wings[0], tuple)
+        assert len(wings[0]) == 2
+        assert "(◈)" in skin.spinner.get("waiting_faces", [])
+        assert "reflecting" in skin.spinner.get("thinking_verbs", [])
+
+    def test_essencia_branding(self):
+        from hermes_cli.skin_engine import load_skin
+
+        skin = load_skin("essencia")
+        assert skin.get_branding("agent_name") == "Corpus"
+        assert skin.get_branding("prompt_symbol") == "◈"
+        assert skin.get_branding("response_label") == " ◈ Corpus "
 
     def test_mono_skin_loads(self):
         from hermes_cli.skin_engine import load_skin
@@ -146,6 +176,7 @@ class TestSkinManagement:
         assert "slate" in names
         assert "daylight" in names
         assert "warm-lightmode" in names
+        assert "essencia" in names
         for s in skins:
             assert "source" in s
             assert s["source"] == "builtin"
@@ -233,7 +264,7 @@ class TestUserSkins:
 
         assert skin.name == "broken"
         assert skin.get_color("banner_title") == "#FFD700"
-        assert skin.get_branding("agent_name") == "Hermes Agent"
+        assert skin.get_branding("agent_name") == "Corpus Agent"
         assert skin.spinner.get("waiting_faces", []) == []
         assert skin.tool_emojis == {}
         assert skin.tool_prefix == "!"
