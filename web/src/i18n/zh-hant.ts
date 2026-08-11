@@ -121,7 +121,7 @@ export const zhHant: Translations = {
     startedInBackground: "已於背景啟動 — 請查看日誌以取得進度",
     stopped: "已停止",
     updateHermes: "更新 Hermes",
-    updatingHermes: "正在更新 Hermes…",
+    updatingHermes: "正在更新 Corpus…",
     waitingForOutput: "等待輸出…",
   },
 
@@ -319,7 +319,7 @@ export const zhHant: Translations = {
     enableRuntime: "啟用",
     forceReinstall: "強制重新安裝（先刪除既有資料夾）",
     headline:
-      "探索、安裝、啟用並更新 Hermes 外掛（對齊 `hermes plugins` CLI）。",
+      "探索、安裝、啟用並更新 Corpus 外掛（對齊 `hermes plugins` CLI）。",
     identifierLabel: "Git 網址或 owner/repo",
     inactive: "未啟用",
     installBtn: "安裝",
@@ -433,7 +433,7 @@ export const zhHant: Translations = {
     showValue: "顯示實際值",
     hideValue: "隱藏值",
     customTitle: "自訂密鑰",
-    customHint: "儲存在 .env 中、Hermes 無法識別的任意環境變數。可用於為技能、MCP 伺服器或你自己的工具注入環境變數。",
+    customHint: "儲存在 .env 中、Corpus 無法識別的任意環境變數。可用於為技能、MCP 伺服器或你自己的工具注入環境變數。",
     customConfigured: "已設定 {count} 個自訂密鑰",
     addCustomKey: "新增自訂密鑰",
     customKeyName: "變數名稱",
@@ -493,11 +493,11 @@ export const zhHant: Translations = {
   achievements: {
     hero: {
       kicker: "Agentic Gamerscore",
-      title: "Hermes Achievements",
+      title: "Corpus Achievements",
       subtitle:
-        "從真實工作階段歷史中獲得的 Hermes 可收集徽章。已知尚未達成的成就會顯示為「已發現」；秘密成就在首次出現相符行為之前保持隱藏。",
+        "從真實工作階段歷史中獲得的 Corpus 可收集徽章。已知尚未達成的成就會顯示為「已發現」；秘密成就在首次出現相符行為之前保持隱藏。",
       scan_subtitle:
-        "正在掃描 Hermes 工作階段歷史。在歷史紀錄較多時，首次掃描可能需要 5–10 秒。",
+        "正在掃描 Corpus 工作階段歷史。在歷史紀錄較多時，首次掃描可能需要 5–10 秒。",
     },
     actions: {
       rescan: "重新掃描",
@@ -543,10 +543,10 @@ export const zhHant: Translations = {
       tiers_header: "等級",
       secret_header: "秘密成就",
       secret_body:
-        "秘密成就會隱藏其確切觸發條件。一旦 Hermes 偵測到相關訊號，卡片便會變為「已發現」並顯示其需求。",
+        "秘密成就會隱藏其確切觸發條件。一旦 Corpus 偵測到相關訊號，卡片便會變為「已發現」並顯示其需求。",
       scan_status_header: "掃描狀態",
       scan_status_body:
-        "Hermes 正在對本機歷史進行一次掃描，之後卡片會自動出現。即使需要幾秒鐘，也並未卡住。",
+        "Corpus 正在對本機歷史進行一次掃描，之後卡片會自動出現。即使需要幾秒鐘，也並未卡住。",
       what_scanned_header: "掃描內容",
       what_scanned_body:
         "工作階段、工具呼叫、模型中繼資料、錯誤、成就以及本機解鎖狀態。",
