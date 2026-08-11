@@ -1,16 +1,16 @@
 ---
 sidebar_position: 3
 title: "Android / Termux"
-description: "Run Hermes Agent directly on an Android phone with Termux"
+description: "Run Corpus Agent directly on an Android phone with Termux"
 ---
 
-# Hermes on Android with Termux
+# Corpus on Android with Termux
 
 :::warning Tier 2 platform
 Termux (Android) is a [Tier 2 platform](./platform-support.md#tier-2). The installer script and documentation here are maintained on a best-effort basis only. Commits to `main` may break these packages at any point in time.
 :::
 
-Hermes Agent can run directly on an Android phone through [Termux](https://termux.dev/).
+Corpus Agent can run directly on an Android phone through [Termux](https://termux.dev/).
 
 It gives you a working local CLI on the phone, plus the core extras that are currently known to install cleanly on Android.
 
@@ -18,7 +18,7 @@ It gives you a working local CLI on the phone, plus the core extras that are cur
 
 The tested Termux bundle installs:
 
-- the Hermes CLI
+- the Corpus CLI
 - cron support
 - PTY/background terminal support
 - Telegram gateway support (manual / best-effort background runs)
@@ -42,13 +42,13 @@ A few features still need desktop/server-style dependencies that are not publish
 - Docker-based terminal isolation is not available inside Termux
 - Android may still suspend Termux background jobs, so gateway persistence is best-effort rather than a normal managed service
 
-That does not stop Hermes from working well as a phone-native CLI agent — it just means the recommended mobile install is intentionally narrower than the desktop/server install.
+That does not stop Corpus from working well as a phone-native CLI agent — it just means the recommended mobile install is intentionally narrower than the desktop/server install.
 
 ---
 
 ## Option 1: One-line installer
 
-Hermes now ships a Termux-aware installer path:
+Corpus now ships a Termux-aware installer path:
 
 ```bash
 curl -fsSL https://hermes-agent.nousresearch.com/install.sh | bash
@@ -84,7 +84,7 @@ Why these packages?
 - `ripgrep` — fast file search
 - `ffmpeg` — media / TTS conversions
 
-### 2. Clone Hermes
+### 2. Clone Corpus
 
 ```bash
 git clone https://github.com/NousResearch/hermes-agent.git
@@ -129,7 +129,7 @@ hermes version
 hermes doctor
 ```
 
-### 7. Start Hermes
+### 7. Start Corpus
 
 ```bash
 hermes
